@@ -21,13 +21,12 @@
         "--share=network",
 	"--filesystem=xdg-data/tubefeeder:create",
 	"--filesystem=xdg-cache/tubefeeder:create",
-	"--filesystem=xdg-config/mpv:ro"
+	"--filesystem=xdg-config/mpv:ro",
+        "--filesystem=xdg-run/pipewire-0",
+        "--system-talk-name=org.freedesktop.RealtimeKit1"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
-        "test-args": [
-            "--socket=x11"
-        ],
         "env": {
             "CARGO_HOME": "/run/build/tubefeeder/cargo",
             "RUST_BACKTRACE": "1"
@@ -47,14 +46,13 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "tag": "package_flatpak",
-		    "commit": "176261a130ba9f6911b17f4ed5fdbddecc9facdf"
+		    "branch": "flathub_fix",
+		    "commit": "76771da8e72b338d91d629a64a496ab750456edc"
                 },
 		"cargo-sources.json"
             ],
 	    "post-install": [
 		    "install -D packaging/de.schmidhuberj.tubefeeder.appdata.xml /app/share/metainfo/de.schmidhuberj.tubefeeder.appdata.xml",
-                    "sed -i 's/de.schmidhuberj.Tubefeeder.desktop/de.schmidhuberj.tubefeeder.desktop/g' /app/share/metainfo/de.schmidhuberj.tubefeeder.appdata.xml",
 		    "install -D packaging/tubefeeder.desktop /app/share/applications/de.schmidhuberj.tubefeeder.desktop",
 		    "install -D packaging/tubefeeder.png /app/share/icons/hicolor/512x512/apps/de.schmidhuberj.tubefeeder.png"
 	    ]
