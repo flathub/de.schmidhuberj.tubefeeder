@@ -6,12 +6,6 @@
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
-    "add-extensions": { "org.freedesktop.Platform.ffmpeg-full": {
-        "directory": "lib/ffmpeg",
-        "version": "21.08beta",
-        "add-ld-path": "."
-      }
-    },
     "command": "tubefeeder",
     "finish-args": [
         "--socket=fallback-x11",
@@ -21,9 +15,7 @@
         "--share=network",
 	"--filesystem=xdg-data/tubefeeder:create",
 	"--filesystem=xdg-cache/tubefeeder:create",
-	"--filesystem=xdg-config/mpv:ro",
-        "--filesystem=xdg-run/pipewire-0",
-        "--system-talk-name=org.freedesktop.RealtimeKit1"
+	"--filesystem=xdg-config/mpv:ro"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -40,7 +32,8 @@
 	    "build-commands": [
 		    "cargo --offline fetch --manifest-path Cargo.toml",
 		    "cargo --offline build --release",
-		    "install -D target/release/tubefeeder /app/bin/tubefeeder"
+		    "install -D target/release/tubefeeder /app/bin/tubefeeder",
+		    "install -d /app/lib/ffmpeg"
 	    ],
             "sources" : [
                 {
