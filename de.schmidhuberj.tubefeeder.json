@@ -8,7 +8,7 @@
     ],
     "add-extensions": { "org.freedesktop.Platform.ffmpeg-full": {
         "directory": "lib/ffmpeg",
-        "version": "21.08beta",
+        "version": "20.08",
         "add-ld-path": "."
       }
     },
@@ -40,7 +40,8 @@
 	    "build-commands": [
 		    "cargo --offline fetch --manifest-path Cargo.toml",
 		    "cargo --offline build --release",
-		    "install -D target/release/tubefeeder /app/bin/tubefeeder"
+		    "install -D target/release/tubefeeder /app/bin/tubefeeder",
+		    "install -d /app/lib/ffmpeg"
 	    ],
             "sources" : [
                 {
