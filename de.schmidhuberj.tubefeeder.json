@@ -44,10 +44,10 @@
 	    ],
             "sources" : [
                 {
-                    "type": "git",
-                    "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "branch": "flathub_fix",
-		    "commit": "76771da8e72b338d91d629a64a496ab750456edc"
+
+                    "type": "archive",
+                    "url": "https://github.com/Schmiddiii/Tubefeeder/archive/refs/tags/v1.2.1.tar.gz",
+		    "sha256": "fbca420121cb180b4d5c132ce136e5a8142125cc365c1569cb9b09b00eff70f4"
                 },
 		"cargo-sources.json"
             ],
