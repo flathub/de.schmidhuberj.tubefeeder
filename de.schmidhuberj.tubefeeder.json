@@ -39,8 +39,8 @@
                 {
 
                     "type": "archive",
-                    "url": "https://github.com/Schmiddiii/Tubefeeder/archive/refs/tags/v1.2.2.tar.gz",
-		    "sha256": "a85fa43fe6e43b2dd5a00a17c648a23d69d6b15d94a97205cd2397b203487dd8"
+                    "url": "https://github.com/Schmiddiii/Tubefeeder/archive/refs/tags/v1.2.3.tar.gz",
+		    "sha256": "03eb34407fa9d86f0a82f1d6597b2b3405890d990316bf1199fc06dfb4b7deb9"
                 },
 		"cargo-sources.json"
             ],
