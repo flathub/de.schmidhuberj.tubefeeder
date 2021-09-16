@@ -1,3 +1,4 @@
 .flatpak-builder
+flatpak-cargo-generator.py
 build-dir
 repo
