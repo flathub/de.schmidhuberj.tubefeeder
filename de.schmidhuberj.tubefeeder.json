@@ -38,8 +38,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/Schmiddiii/Tubefeeder/archive/refs/tags/v1.2.3.tar.gz",
-                    "sha256": "03eb34407fa9d86f0a82f1d6597b2b3405890d990316bf1199fc06dfb4b7deb9"
+                    "url": "https://github.com/Schmiddiii/Tubefeeder/archive/refs/tags/v1.3.0.tar.gz",
+                    "sha256": "d827962107769efe8641028b182c51d7cfae47a53b4daf612995fa676f4b2cdf"
                 },
                 "cargo-sources.json"
             ],
