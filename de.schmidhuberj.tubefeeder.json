@@ -39,8 +39,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "commit": "0ae105605d9ffe11dcb252b2dd967eeba0d7dee8",
-                    "branch": "refactor"
+		    "commit": "4bbdfb5d1eda5a782d0c88b5a5436fb23c9bfee8",
+                    "branch": "invidious"
                 },
                 "cargo-sources.json"
             ],
