@@ -3,18 +3,16 @@ modules:
   - pipewire/pipewire-jack-runtime.json
   - ../shared-modules/lua5.1/lua-5.1.5.json
 
-  - name: youtube-dl
-    no-autogen: true
-    no-make-install: true
-    make-args:
-      - youtube-dl
-      - PYTHON=/usr/bin/python3
+  - name: yt-dlp
+    buildsystem: simple
+    build-commands:
+      - PYTHON=/usr/bin/python3 make yt-dlp
     post-install:
-      - install youtube-dl /app/bin
+      - install yt-dlp /app/bin
     sources:
       - type: archive
-        url: https://github.com/ytdl-org/youtube-dl/archive/2021.04.26.tar.gz
-        sha256: d80023ab221b3cb89229b632e247035a22c5afaee9a7b3c653bbd702f71c1083
+        url: https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2021.09.25.tar.gz
+        sha256: 8d2e5ab7dd143a1c11731eb6e9b05ebe327184e01d820e2a0a27ef9ee5f5a04b
 
   - name: uchardet
     buildsystem: cmake-ninja

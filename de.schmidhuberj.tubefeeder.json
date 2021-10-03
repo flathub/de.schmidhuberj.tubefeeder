@@ -39,9 +39,13 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "commit": "4bbdfb5d1eda5a782d0c88b5a5436fb23c9bfee8",
-                    "branch": "invidious"
-                },
+		    "commit": "e07bc18f2766487834bf2d652e591e34f1b71baa",
+                    "branch": "peertube"
+		}, 
+		{
+		    "type": "patch",
+		    "path": "yt-dlp.patch"
+		},
                 "cargo-sources.json"
             ],
             "post-install": [
