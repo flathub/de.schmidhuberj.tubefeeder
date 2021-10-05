@@ -39,8 +39,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "commit": "e07bc18f2766487834bf2d652e591e34f1b71baa",
-                    "branch": "peertube"
+		    "commit": "39594f19d546bfc9112d3bb6976c9e5efbfaf85d",
+                    "branch": "piped-backend"
 		}, 
 		{
 		    "type": "patch",
