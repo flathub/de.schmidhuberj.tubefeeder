@@ -39,7 +39,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "commit": "39594f19d546bfc9112d3bb6976c9e5efbfaf85d",
+		    "commit": "8b187a25677613a83f575b691602d307fa0ea0f2",
                     "branch": "piped-backend"
 		}, 
 		{
