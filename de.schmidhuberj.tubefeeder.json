@@ -15,7 +15,8 @@
         "--share=network",
         "--filesystem=xdg-data/tubefeeder:create",
         "--filesystem=xdg-cache/tubefeeder:create",
-        "--filesystem=xdg-config/mpv:ro"
+        "--filesystem=xdg-config/mpv:ro",
+        "--filesystem=xdg-download"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -39,12 +40,16 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "commit": "d63bc90677b0b7ebf04e96292a285967392862f6",
-                    "branch": "master"
+		    "commit": "6fef172f48fc4d3037e195576983be13733b1a5b",
+                    "branch": "download-clipboard"
 		}, 
 		{
 		    "type": "patch",
-		    "path": "yt-dlp.patch"
+		    "path": "yt-dlp-downloader.patch"
+		},
+		{
+		    "type": "patch",
+		    "path": "yt-dlp-player.patch"
 		},
                 "cargo-sources.json"
             ],
