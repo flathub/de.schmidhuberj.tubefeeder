@@ -38,10 +38,9 @@
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "commit": "7d6e2c8f8f37cd0a4b090d219e65f2eeab6943bb",
-                    "branch": "download-clipboard"
+                    "type": "archive",
+                    "url": "https://github.com/Schmiddiii/Tubefeeder/archive/refs/tags/v1.5.0.tar.gz",
+		    "sha256": "5ac2917366c7c8112b7019da13092d8bc3308f368c15584a1eb15efb172183b0"
 		}, 
 		{
 		    "type": "patch",
