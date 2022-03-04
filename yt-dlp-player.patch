@@ -1,13 +1,13 @@
 diff --git a/src/player.rs b/src/player.rs
-index ccef408..695ae5a 100644
+index d846a0f..03a4819 100644
 --- a/src/player.rs
 +++ b/src/player.rs
-@@ -30,7 +30,7 @@ pub fn play(video: AnyVideo) {
-         log::debug!("Playing video with title: {}", video.title());
-         log::debug!("Playing video with url: {}", video.url());
-         video.play();
--        let player_str = std::env::var("PLAYER").unwrap_or("mpv --ytdl".to_string());
-+        let player_str = std::env::var("PLAYER").unwrap_or("mpv --ytdl --script-opts=ytdl_hook-ytdl_path=yt-dlp".to_string());
- 
-         let mut player_iter = player_str.split(" ");
-         let player = player_iter.next().unwrap_or("mpv");
+@@ -31,7 +31,8 @@ pub fn play<
+     callback: F,
+ ) {
+     log::debug!("Playing video with url: {}", url);
+-    let player_str = std::env::var("PLAYER").unwrap_or("mpv --ytdl".to_string());
++    let player_str = std::env::var("PLAYER")
++        .unwrap_or("mpv --ytdl --script-opts=ytdl_hook-ytdl_path=yt-dlp".to_string());
+     open_with(url, player_str, callback);
+ }

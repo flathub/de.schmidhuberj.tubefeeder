@@ -1,7 +1,7 @@
 {
     "app-id": "de.schmidhuberj.tubefeeder",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "40",
+    "runtime-version": "41",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -27,6 +27,8 @@
     },
     "modules": [
         "io.mpv.Mpv/io.mpv.Mpv.yml",
+        "libadwaita.json",
+        "gtk.json",
         {
             "name": "tubefeeder",
             "buildsystem": "simple",
@@ -40,8 +42,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "commit": "7d6e2c8f8f37cd0a4b090d219e65f2eeab6943bb",
-                    "branch": "download-clipboard"
+		    "commit": "67bb69d06f4512b3fc669df44c110be5c2ce1126",
+                    "branch": "gtk4v2"
 		}, 
 		{
 		    "type": "patch",
