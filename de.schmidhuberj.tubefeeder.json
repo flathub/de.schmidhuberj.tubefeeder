@@ -42,7 +42,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "commit": "262a431db1b096aa07c6a20b6a895b98f86646bf",
+		    "commit": "0cc039e72e91d8d61e711fece84ece7f4347353e",
                     "branch": "gtk4v2"
 		}, 
 		{
