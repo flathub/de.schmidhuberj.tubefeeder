@@ -42,7 +42,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "commit": "0cc039e72e91d8d61e711fece84ece7f4347353e",
+		    "commit": "eff5173d87d55af232696e0dadd20e48d2b72326",
                     "branch": "gtk4v2"
 		}, 
 		{
@@ -53,12 +53,18 @@
 		    "type": "patch",
 		    "path": "yt-dlp-player.patch"
 		},
+		{
+		    "type": "patch",
+		    "path": "internationalization.patch"
+		},
                 "cargo-sources.json"
             ],
             "post-install": [
                 "install -D packaging/de.schmidhuberj.tubefeeder.appdata.xml /app/share/metainfo/de.schmidhuberj.tubefeeder.appdata.xml",
                 "install -D packaging/tubefeeder.desktop /app/share/applications/de.schmidhuberj.tubefeeder.desktop",
-                "install -D packaging/tubefeeder.png /app/share/icons/hicolor/512x512/apps/de.schmidhuberj.tubefeeder.png"
+                "install -D packaging/tubefeeder.png /app/share/icons/hicolor/512x512/apps/de.schmidhuberj.tubefeeder.png",
+                "ls -ld po/locale/*/ | sed 's|.*po/locale/||' | xargs -I % mkdir -p /app/myshare/locale/%LC_MESSAGES/",
+                "ls -ld po/locale/*/ | sed 's|.*po/locale/||' | xargs -I % cp 'po/locale/%LC_MESSAGES/de.schmidhuberj.tubefeeder.mo' /app/myshare/locale/%LC_MESSAGES/de.schmidhuberj.tubefeeder.mo"
             ]
         }
     ]
