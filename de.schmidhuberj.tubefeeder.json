@@ -27,8 +27,8 @@
     },
     "modules": [
         "io.mpv.Mpv/io.mpv.Mpv.yml",
-        "libadwaita.json",
         "gtk.json",
+        "libadwaita.json",
         {
             "name": "tubefeeder",
             "buildsystem": "simple",
@@ -42,7 +42,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "commit": "eff5173d87d55af232696e0dadd20e48d2b72326",
+		    "commit": "4587492b69a17a5ad83430776d5120faab4639a1",
                     "branch": "gtk4v2"
 		}, 
 		{
