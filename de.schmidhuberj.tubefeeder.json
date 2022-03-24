@@ -1,7 +1,7 @@
 {
     "app-id": "de.schmidhuberj.tubefeeder",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "40",
+    "runtime-version": "42",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -39,8 +39,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/Schmiddiii/Tubefeeder/archive/refs/tags/v1.5.0.tar.gz",
-		    "sha256": "5ac2917366c7c8112b7019da13092d8bc3308f368c15584a1eb15efb172183b0"
+                    "url": "https://github.com/Schmiddiii/Tubefeeder/archive/refs/tags/v1.6.0.tar.gz",
+		    "sha256": "8f85618cbbb363c8ea83a40c48fe47bd84acdb4393bc841c65438cc264dcded6"
 		}, 
 		{
 		    "type": "patch",
@@ -50,12 +50,18 @@
 		    "type": "patch",
 		    "path": "yt-dlp-player.patch"
 		},
+		{
+		    "type": "patch",
+		    "path": "internationalization.patch"
+		},
                 "cargo-sources.json"
             ],
             "post-install": [
                 "install -D packaging/de.schmidhuberj.tubefeeder.appdata.xml /app/share/metainfo/de.schmidhuberj.tubefeeder.appdata.xml",
                 "install -D packaging/tubefeeder.desktop /app/share/applications/de.schmidhuberj.tubefeeder.desktop",
-                "install -D packaging/tubefeeder.png /app/share/icons/hicolor/512x512/apps/de.schmidhuberj.tubefeeder.png"
+                "install -D packaging/tubefeeder.png /app/share/icons/hicolor/512x512/apps/de.schmidhuberj.tubefeeder.png",
+                "ls -ld po/locale/*/ | sed 's|.*po/locale/||' | xargs -I % mkdir -p /app/myshare/locale/%LC_MESSAGES/",
+                "ls -ld po/locale/*/ | sed 's|.*po/locale/||' | xargs -I % cp 'po/locale/%LC_MESSAGES/de.schmidhuberj.tubefeeder.mo' /app/myshare/locale/%LC_MESSAGES/de.schmidhuberj.tubefeeder.mo"
             ]
         }
     ]

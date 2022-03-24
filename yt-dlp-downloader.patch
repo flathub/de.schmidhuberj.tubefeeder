@@ -1,17 +1,12 @@
 diff --git a/src/downloader.rs b/src/downloader.rs
-index df90523..4f7f91f 100644
+index c0f03b4..9e6ef76 100644
 --- a/src/downloader.rs
 +++ b/src/downloader.rs
-@@ -33,10 +33,10 @@ pub fn download(video: AnyVideo) {
-         let download_dir = std::env::var("XDG_DOWNLOAD_DIR")
-             .unwrap_or("$HOME/Downloads/%(title)s-%(id)s.%(ext)s".to_string());
-         let downloader_str =
--            std::env::var("DOWNLOADER").unwrap_or(format!("youtube-dl --output {}", download_dir));
-+            std::env::var("DOWNLOADER").unwrap_or(format!("yt-dlp --output {}", download_dir));
- 
-         let mut downloader_iter = downloader_str.split(" ");
--        let downloader = downloader_iter.next().unwrap_or("youtube-dl");
-+        let downloader = downloader_iter.next().unwrap_or("yt-dlp");
-         let args: Vec<String> = downloader_iter.map(|s| s.to_string()).collect();
- 
-         let stdout = if log::log_enabled!(log::Level::Debug) {
+@@ -32,6 +32,6 @@ pub fn download<
+     let download_dir = std::env::var("XDG_DOWNLOAD_DIR")
+         .unwrap_or("$HOME/Downloads/%(title)s-%(id)s.%(ext)s".to_string());
+     let downloader_str =
+-        std::env::var("DOWNLOADER").unwrap_or(format!("youtube-dl --output {}", download_dir));
++        std::env::var("DOWNLOADER").unwrap_or(format!("yt-dlp --output {}", download_dir));
+     open_with(url, downloader_str, callback);
+ }
