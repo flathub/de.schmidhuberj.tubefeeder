@@ -1926,14 +1926,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/piped/piped-0.0.1.crate",
-        "sha256": "d63f1f13e917f0ef427475c0e8f604563ce31cd90514e160a52a194218ac6ebf",
-        "dest": "cargo/vendor/piped-0.0.1"
+        "url": "https://static.crates.io/crates/piped/piped-0.0.2.crate",
+        "sha256": "c29ef6b3e30e1a0615ee5edd2bfc50c463bd8006eb32a04f80b5f701453bb005",
+        "dest": "cargo/vendor/piped-0.0.2"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22d63f1f13e917f0ef427475c0e8f604563ce31cd90514e160a52a194218ac6ebf%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/piped-0.0.1",
+        "url": "data:%7B%22package%22%3A%20%22c29ef6b3e30e1a0615ee5edd2bfc50c463bd8006eb32a04f80b5f701453bb005%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/piped-0.0.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2537,14 +2537,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/tf_join/tf_join-0.1.2.crate",
-        "sha256": "8053a896a192abb16fce51fe9e14cf17cca5de759e38911ae4deafde4d34cde9",
-        "dest": "cargo/vendor/tf_join-0.1.2"
+        "url": "https://static.crates.io/crates/tf_join/tf_join-0.1.3.crate",
+        "sha256": "735c895a121d1e76ef1f21cdd9ff8e3c9cf780f9bcb5ab2a368a501e0c698181",
+        "dest": "cargo/vendor/tf_join-0.1.3"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%228053a896a192abb16fce51fe9e14cf17cca5de759e38911ae4deafde4d34cde9%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/tf_join-0.1.2",
+        "url": "data:%7B%22package%22%3A%20%22735c895a121d1e76ef1f21cdd9ff8e3c9cf780f9bcb5ab2a368a501e0c698181%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/tf_join-0.1.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2589,14 +2589,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/tf_platform_youtube/tf_platform_youtube-0.1.2.crate",
-        "sha256": "a5d8cdae6e6e8e181cf47e76e3efdb4fdb13ae75fdac9f093947bcdbd683cae6",
-        "dest": "cargo/vendor/tf_platform_youtube-0.1.2"
+        "url": "https://static.crates.io/crates/tf_platform_youtube/tf_platform_youtube-0.1.3.crate",
+        "sha256": "b7e6d557290e96629aed83dbffdc1690bc6a6a4966d3e2f97a9ca51e84e83764",
+        "dest": "cargo/vendor/tf_platform_youtube-0.1.3"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22a5d8cdae6e6e8e181cf47e76e3efdb4fdb13ae75fdac9f093947bcdbd683cae6%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/tf_platform_youtube-0.1.2",
+        "url": "data:%7B%22package%22%3A%20%22b7e6d557290e96629aed83dbffdc1690bc6a6a4966d3e2f97a9ca51e84e83764%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/tf_platform_youtube-0.1.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
