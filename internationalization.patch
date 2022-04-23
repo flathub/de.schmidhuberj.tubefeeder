@@ -1,13 +1,22 @@
 diff --git a/src/main.rs b/src/main.rs
-index f30cc29..4834494 100644
+index 995b915..7ed8167 100644
 --- a/src/main.rs
 +++ b/src/main.rs
-@@ -62,7 +62,7 @@ fn init_folders() {
+@@ -54,7 +54,7 @@ fn init_folders() {
  fn init_internationalization() -> Result<(), Box<dyn std::error::Error>> {
-     gettextrs::TextDomain::new("de.schmidhuberj.tubefeeder")
+     if let Ok(loc) = gettextrs::TextDomain::new("de.schmidhuberj.tubefeeder")
          .locale_category(gettextrs::LocaleCategory::LcAll)
 -        .prepend("./po")
 +        .prepend("/app/myshare")
-         .init()?;
+         .init()
+     {
+         log::debug!(
+@@ -66,7 +66,7 @@ fn init_internationalization() -> Result<(), Box<dyn std::error::Error>> {
+         gettextrs::TextDomain::new("de.schmidhuberj.tubefeeder")
+             .locale_category(gettextrs::LocaleCategory::LcAll)
+             .locale("en_US")
+-            .prepend("./po")
++            .prepend("/app/myshare")
+             .init()?;
+     }
      Ok(())
- }
