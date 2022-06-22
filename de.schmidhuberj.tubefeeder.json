@@ -39,8 +39,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/Schmiddiii/Tubefeeder/archive/refs/tags/v1.7.1.tar.gz",
-		    "sha256": "4961f9e4bc47cd5899371b6e8e64fb5d12393f1a68091cf613029acc81268b08"
+                    "url": "https://github.com/Schmiddiii/Tubefeeder/archive/refs/tags/v1.8.1.tar.gz",
+		    "sha256": "10bdc85dc8616d5d429515a0f53ae74b902b021879a9984086a34d2873ce6849"
 		}, 
 		{
 		    "type": "patch",
@@ -58,8 +58,9 @@
             ],
             "post-install": [
                 "install -D packaging/de.schmidhuberj.tubefeeder.appdata.xml /app/share/metainfo/de.schmidhuberj.tubefeeder.appdata.xml",
-                "install -D packaging/tubefeeder.desktop /app/share/applications/de.schmidhuberj.tubefeeder.desktop",
-                "install -D packaging/tubefeeder.png /app/share/icons/hicolor/512x512/apps/de.schmidhuberj.tubefeeder.png",
+                "install -D packaging/de.schmidhuberj.tubefeeder.desktop /app/share/applications/de.schmidhuberj.tubefeeder.desktop",
+                "install -D packaging/de.schmidhuberj.tubefeeder.svg /app/share/icons/hicolor/scalable/apps/de.schmidhuberj.tubefeeder.svg",
+                "install -D packaging/de.schmidhuberj.tubefeeder.512.png /app/share/icons/hicolor/512x512/apps/de.schmidhuberj.tubefeeder.png",
                 "ls -ld po/locale/*/ | sed 's|.*po/locale/||' | xargs -I % mkdir -p /app/myshare/locale/%LC_MESSAGES/",
                 "ls -ld po/locale/*/ | sed 's|.*po/locale/||' | xargs -I % cp 'po/locale/%LC_MESSAGES/de.schmidhuberj.tubefeeder.mo' /app/myshare/locale/%LC_MESSAGES/de.schmidhuberj.tubefeeder.mo"
             ]
