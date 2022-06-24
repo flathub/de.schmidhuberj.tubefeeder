@@ -16,7 +16,8 @@
         "--filesystem=xdg-data/tubefeeder:create",
         "--filesystem=xdg-cache/tubefeeder:create",
         "--filesystem=xdg-config/mpv:ro",
-        "--filesystem=xdg-download"
+        "--filesystem=xdg-download",
+        "--talk-name=org.freedesktop.Flatpak"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -40,7 +41,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "commit": "61511513d89cbbc3447f87319d85c7c216d997de",
+		    "commit": "549291f9bba0f5b87cf9c16def8ef10f2cc910f3",
                     "branch": "master"
 		}, 
 		{
@@ -59,8 +60,10 @@
             ],
             "post-install": [
                 "install -D packaging/de.schmidhuberj.tubefeeder.appdata.xml /app/share/metainfo/de.schmidhuberj.tubefeeder.appdata.xml",
-                "install -D packaging/tubefeeder.desktop /app/share/applications/de.schmidhuberj.tubefeeder.desktop",
-                "install -D packaging/tubefeeder.png /app/share/icons/hicolor/512x512/apps/de.schmidhuberj.tubefeeder.png",
+                "install -D packaging/de.schmidhuberj.tubefeeder.desktop /app/share/applications/de.schmidhuberj.tubefeeder.desktop",
+                "install -D packaging/de.schmidhuberj.tubefeeder.svg /app/share/icons/hicolor/scalable/apps/de.schmidhuberj.tubefeeder.svg",
+                "install -D packaging/de.schmidhuberj.tubefeeder.512.png /app/share/icons/hicolor/512x512/apps/de.schmidhuberj.tubefeeder.png",
+                "install -D packaging/de.schmidhuberj.tubefeeder.symbolic.svg /app/share/icons/hicolor/symbolic/apps/de.schmidhuberj.tubefeeder-symbolic.svg",
                 "ls -ld po/locale/*/ | sed 's|.*po/locale/||' | xargs -I % mkdir -p /app/myshare/locale/%LC_MESSAGES/",
                 "ls -ld po/locale/*/ | sed 's|.*po/locale/||' | xargs -I % cp 'po/locale/%LC_MESSAGES/de.schmidhuberj.tubefeeder.mo' /app/myshare/locale/%LC_MESSAGES/de.schmidhuberj.tubefeeder.mo"
             ]
