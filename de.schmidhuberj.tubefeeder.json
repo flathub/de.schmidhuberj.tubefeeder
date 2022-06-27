@@ -16,8 +16,7 @@
         "--filesystem=xdg-data/tubefeeder:create",
         "--filesystem=xdg-cache/tubefeeder:create",
         "--filesystem=xdg-config/mpv:ro",
-        "--filesystem=xdg-download",
-        "--talk-name=org.freedesktop.Flatpak"
+        "--filesystem=xdg-download"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -41,8 +40,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "commit": "549291f9bba0f5b87cf9c16def8ef10f2cc910f3",
-                    "branch": "master"
+		    "commit": "620dbd995770418a1282f76c7c0f3426f8635324",
+                    "branch": "play-local-videos"
 		}, 
 		{
 		    "type": "patch",
