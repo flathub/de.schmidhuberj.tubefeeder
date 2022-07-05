@@ -62,6 +62,11 @@
                 "install -D packaging/de.schmidhuberj.tubefeeder.svg /app/share/icons/hicolor/scalable/apps/de.schmidhuberj.tubefeeder.svg",
                 "install -D packaging/de.schmidhuberj.tubefeeder.512.png /app/share/icons/hicolor/512x512/apps/de.schmidhuberj.tubefeeder.png",
                 "install -D packaging/de.schmidhuberj.tubefeeder.symbolic.svg /app/share/icons/hicolor/symbolic/apps/de.schmidhuberj.tubefeeder-symbolic.svg",
+                "ls -ld po/locale/*/ | sed 's|.*po/locale/||' | xargs -I % mkdir -p po/locale/%LC_MESSAGES/",
+                "msgfmt po/locale/de/de.schmidhuberj.tubefeeder.po -o po/locale/de/LC_MESSAGES/de.schmidhuberj.tubefeeder.mo",
+                "msgfmt po/locale/en/de.schmidhuberj.tubefeeder.po -o po/locale/en/LC_MESSAGES/de.schmidhuberj.tubefeeder.mo",
+                "msgfmt po/locale/it/de.schmidhuberj.tubefeeder.po -o po/locale/it/LC_MESSAGES/de.schmidhuberj.tubefeeder.mo",
+                "msgfmt po/locale/ru/de.schmidhuberj.tubefeeder.po -o po/locale/ru/LC_MESSAGES/de.schmidhuberj.tubefeeder.mo",
                 "ls -ld po/locale/*/ | sed 's|.*po/locale/||' | xargs -I % mkdir -p /app/myshare/locale/%LC_MESSAGES/",
                 "ls -ld po/locale/*/ | sed 's|.*po/locale/||' | xargs -I % cp 'po/locale/%LC_MESSAGES/de.schmidhuberj.tubefeeder.mo' /app/myshare/locale/%LC_MESSAGES/de.schmidhuberj.tubefeeder.mo"
             ]
