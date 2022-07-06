@@ -40,8 +40,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "commit": "620dbd995770418a1282f76c7c0f3426f8635324",
-                    "branch": "play-local-videos"
+		    "commit": "a8ea79ab11fd2106548fc71344d251d7e976695b",
+                    "branch": "fix-local-video-playback"
 		}, 
 		{
 		    "type": "patch",

@@ -2537,14 +2537,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/tf_join/tf_join-0.1.3.crate",
-        "sha256": "735c895a121d1e76ef1f21cdd9ff8e3c9cf780f9bcb5ab2a368a501e0c698181",
-        "dest": "cargo/vendor/tf_join-0.1.3"
+        "url": "https://static.crates.io/crates/tf_join/tf_join-0.1.4.crate",
+        "sha256": "c1be9691db0445e486c16e56ada217e3527c9a41cb1401de83bac6d9c79892a9",
+        "dest": "cargo/vendor/tf_join-0.1.4"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22735c895a121d1e76ef1f21cdd9ff8e3c9cf780f9bcb5ab2a368a501e0c698181%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/tf_join-0.1.3",
+        "url": "data:%7B%22package%22%3A%20%22c1be9691db0445e486c16e56ada217e3527c9a41cb1401de83bac6d9c79892a9%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/tf_join-0.1.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2589,14 +2589,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/tf_platform_youtube/tf_platform_youtube-0.1.3.crate",
-        "sha256": "b7e6d557290e96629aed83dbffdc1690bc6a6a4966d3e2f97a9ca51e84e83764",
-        "dest": "cargo/vendor/tf_platform_youtube-0.1.3"
+        "url": "https://static.crates.io/crates/tf_platform_youtube/tf_platform_youtube-0.1.4.crate",
+        "sha256": "e38da0106301825d8e18e4ce647494cba5258ab8996891ee82e882fa548fc2aa",
+        "dest": "cargo/vendor/tf_platform_youtube-0.1.4"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22b7e6d557290e96629aed83dbffdc1690bc6a6a4966d3e2f97a9ca51e84e83764%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/tf_platform_youtube-0.1.3",
+        "url": "data:%7B%22package%22%3A%20%22e38da0106301825d8e18e4ce647494cba5258ab8996891ee82e882fa548fc2aa%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/tf_platform_youtube-0.1.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
