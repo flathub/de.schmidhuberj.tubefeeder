@@ -39,8 +39,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/Schmiddiii/Tubefeeder/archive/refs/tags/v1.8.3.tar.gz",
-		    "sha256": "9e4358245370488b222548b590bbf04e3dc6c0eb04fcadaf2bc78da4f8569e56"
+                    "url": "https://github.com/Schmiddiii/Tubefeeder/archive/refs/tags/v1.8.4.tar.gz",
+		    "sha256": "e649e20ca0e79c26960f74a6e75bad9692541b75507fd398908b165eb05b3a73"
 		}, 
 		{
 		    "type": "patch",
