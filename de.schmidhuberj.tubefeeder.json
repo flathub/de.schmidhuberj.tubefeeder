@@ -40,8 +40,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Schmiddiii/Tubefeeder.git",
-		    "commit": "a8ea79ab11fd2106548fc71344d251d7e976695b",
-                    "branch": "fix-local-video-playback"
+		    "commit": "ffc63fe4be459726430d6597fe8df29dfe5c9db7",
+                    "branch": "master"
 		}, 
 		{
 		    "type": "patch",
@@ -67,7 +67,8 @@
                 "msgfmt po/locale/de/de.schmidhuberj.tubefeeder.po -o /app/myshare/locale/de/LC_MESSAGES/de.schmidhuberj.tubefeeder.mo",
                 "msgfmt po/locale/en/de.schmidhuberj.tubefeeder.po -o /app/myshare/locale/en/LC_MESSAGES/de.schmidhuberj.tubefeeder.mo",
                 "msgfmt po/locale/it/de.schmidhuberj.tubefeeder.po -o /app/myshare/locale/it/LC_MESSAGES/de.schmidhuberj.tubefeeder.mo",
-                "msgfmt po/locale/ru/de.schmidhuberj.tubefeeder.po -o /app/myshare/locale/ru/LC_MESSAGES/de.schmidhuberj.tubefeeder.mo"
+                "msgfmt po/locale/ru/de.schmidhuberj.tubefeeder.po -o /app/myshare/locale/ru/LC_MESSAGES/de.schmidhuberj.tubefeeder.mo",
+                "msgfmt po/locale/nl/de.schmidhuberj.tubefeeder.po -o /app/myshare/locale/nl/LC_MESSAGES/de.schmidhuberj.tubefeeder.mo"
             ]
         }
     ]
