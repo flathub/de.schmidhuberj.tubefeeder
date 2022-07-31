@@ -39,8 +39,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/Schmiddiii/Tubefeeder/archive/refs/tags/v1.8.4.tar.gz",
-		    "sha256": "e649e20ca0e79c26960f74a6e75bad9692541b75507fd398908b165eb05b3a73"
+                    "url": "https://github.com/Schmiddiii/Tubefeeder/archive/refs/tags/v1.8.5.tar.gz",
+		    "sha256": "0b0f32a40b36be83d2a5cac1d429654d350fd98761ebb634c80f775611236697"
 		}, 
 		{
 		    "type": "patch",
@@ -67,6 +67,8 @@
                 "msgfmt po/locale/en/de.schmidhuberj.tubefeeder.po -o po/locale/en/LC_MESSAGES/de.schmidhuberj.tubefeeder.mo",
                 "msgfmt po/locale/it/de.schmidhuberj.tubefeeder.po -o po/locale/it/LC_MESSAGES/de.schmidhuberj.tubefeeder.mo",
                 "msgfmt po/locale/ru/de.schmidhuberj.tubefeeder.po -o po/locale/ru/LC_MESSAGES/de.schmidhuberj.tubefeeder.mo",
+                "msgfmt po/locale/cs/de.schmidhuberj.tubefeeder.po -o po/locale/cs/LC_MESSAGES/de.schmidhuberj.tubefeeder.mo",
+                "msgfmt po/locale/nl/de.schmidhuberj.tubefeeder.po -o po/locale/nl/LC_MESSAGES/de.schmidhuberj.tubefeeder.mo",
                 "ls -ld po/locale/*/ | sed 's|.*po/locale/||' | xargs -I % mkdir -p /app/myshare/locale/%LC_MESSAGES/",
                 "ls -ld po/locale/*/ | sed 's|.*po/locale/||' | xargs -I % cp 'po/locale/%LC_MESSAGES/de.schmidhuberj.tubefeeder.mo' /app/myshare/locale/%LC_MESSAGES/de.schmidhuberj.tubefeeder.mo"
             ]
