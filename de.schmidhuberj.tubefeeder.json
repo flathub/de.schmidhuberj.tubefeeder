@@ -17,7 +17,8 @@
         "--filesystem=xdg-cache/tubefeeder:create",
         "--filesystem=xdg-config/mpv:ro",
         "--filesystem=xdg-download",
-        "--talk-name=org.freedesktop.portal.FileChooser"
+        "--talk-name=org.freedesktop.portal.FileChooser",
+        "--talk-name=org.freedesktop.Flatpak"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -27,7 +28,6 @@
         }
     },
     "modules": [
-        "io.mpv.Mpv/io.mpv.Mpv.yml",
         {
             "name": "tubefeeder",
             "buildsystem": "meson",
@@ -43,7 +43,11 @@
 		}, 
 		{
 		    "type": "patch",
-		    "path": "settings.patch"
+		    "path": "player_downloader.diff"
+		},
+		{
+		    "type": "patch",
+		    "path": "release.diff"
 		}
             ]
         }
