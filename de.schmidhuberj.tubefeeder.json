@@ -1,7 +1,7 @@
 {
     "app-id": "de.schmidhuberj.tubefeeder",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "42",
+    "runtime-version": "43",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -38,8 +38,8 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-xz",
-                    "url": "https://github.com/Tubefeeder/Tubefeeder/releases/download/v1.9.1/tubefeeder-1.9.1.tar.xz",
-                    "sha256": "93769a401c225278b6abee206b6e3c5e0ab62bfc4982ebc9d52c9d0adcdb8b11"
+                    "url": "https://github.com/Tubefeeder/Tubefeeder/releases/download/v1.9.2/tubefeeder-1.9.2.tar.xz",
+                    "sha256": "fc612b6c4ba505300083872460f4891f8eae7544a8f05a2ac5cb4d79c76867ab"
 		}, 
 		{
 		    "type": "patch",
