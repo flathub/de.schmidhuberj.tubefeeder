@@ -8,14 +8,13 @@
     ],
     "command": "tubefeeder",
     "finish-args": [
+        "--share=ipc",
         "--socket=fallback-x11",
         "--socket=wayland",
         "--socket=pulseaudio",
         "--device=dri",
         "--share=network",
         "--filesystem=xdg-data/tubefeeder:create",
-        "--filesystem=xdg-cache/tubefeeder:create",
-        "--filesystem=xdg-config/mpv:ro",
         "--filesystem=xdg-download",
         "--talk-name=org.freedesktop.portal.FileChooser",
         "--talk-name=org.freedesktop.Flatpak"
