@@ -16,7 +16,6 @@
         "--share=network",
         "--filesystem=xdg-data/tubefeeder:create",
         "--filesystem=xdg-download",
-        "--talk-name=org.freedesktop.portal.FileChooser",
         "--talk-name=org.freedesktop.Flatpak"
     ],
     "build-options": {
