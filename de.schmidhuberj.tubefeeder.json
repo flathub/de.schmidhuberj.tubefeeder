@@ -36,8 +36,8 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-xz",
-                    "url": "https://github.com/Tubefeeder/Tubefeeder/releases/download/v1.9.5/tubefeeder-1.9.5.tar.xz",
-                    "sha256": "955054a519fe76c34cab009b55a760d6bb62d92fc94c3424d0eadfab25c1a6ce"
+                    "url": "https://github.com/Tubefeeder/Tubefeeder/releases/download/v1.9.6/tubefeeder-1.9.6.tar.xz",
+                    "sha256": "92aa40abcaedc60e199000aea0ae34ae4c0b55d8c008698255f790e8f9bd7e85"
 		}, 
 		{
 		    "type": "patch",
