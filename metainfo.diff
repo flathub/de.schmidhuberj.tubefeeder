@@ -1,0 +1,32 @@
+diff --git a/data/de.schmidhuberj.tubefeeder.metainfo.xml b/data/de.schmidhuberj.tubefeeder.metainfo.xml
+index 59131b3..46b19fb 100644
+--- a/data/de.schmidhuberj.tubefeeder.metainfo.xml
++++ b/data/de.schmidhuberj.tubefeeder.metainfo.xml
+@@ -191,20 +191,20 @@
+   </description>
+   <screenshots>
+     <screenshot type="default">
+-      <caption>Feed</caption>
+-      <image>https://gitlab.com/schmiddi-on-mobile/pipeline/blob/master/data/screenshots/feed.png?raw=true</image>
++      <caption>Feed List</caption>
++      <image>https://gitlab.com/schmiddi-on-mobile/pipeline/-/raw/master/data/screenshots/feed.png</image>
+     </screenshot>
+     <screenshot type="default">
+-      <caption>Watch later</caption>
+-      <image>https://gitlab.com/schmiddi-on-mobile/pipeline/blob/master/data/screenshots/watch_later.png?raw=true</image>
++      <caption>Watch Later</caption>
++      <image>https://gitlab.com/schmiddi-on-mobile/pipeline/-/raw/master/data/screenshots/watch_later.png</image>
+     </screenshot>
+     <screenshot type="default">
+-      <caption>Filter</caption>
+-      <image>https://gitlab.com/schmiddi-on-mobile/pipeline/blob/master/data/screenshots/filters.png?raw=true</image>
++      <caption>Filter List</caption>
++      <image>https://gitlab.com/schmiddi-on-mobile/pipeline/-/raw/master/data/screenshots/filters.png</image>
+     </screenshot>
+     <screenshot>
+       <caption>Subscriptions</caption>
+-      <image>https://gitlab.com/schmiddi-on-mobile/pipeline/blob/master/data/screenshots/subscriptions.png?raw=true</image>
++      <image>https://gitlab.com/schmiddi-on-mobile/pipeline/-/raw/master/data/screenshots/subscriptions.png</image>
+     </screenshot>
+   </screenshots>
+   <url type="homepage">https://mobile.schmidhuberj.de/pipeline/</url>
