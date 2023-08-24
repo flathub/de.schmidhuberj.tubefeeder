@@ -42,10 +42,6 @@
 		{
 		    "type": "patch",
 		    "path": "player_downloader.diff"
-		},
-		{
-		    "type": "patch",
-		    "path": "metainfo.diff"
 		}
             ]
         }
