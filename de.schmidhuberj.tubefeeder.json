@@ -1,7 +1,7 @@
 {
     "app-id": "de.schmidhuberj.tubefeeder",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
+    "runtime-version": "45",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -36,8 +36,8 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-xz",
-                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/90172400/download",
-                    "sha256": "934664531b14d086a033b90021ea1197b202f2fbb2b14185a489b3395e4bd4d5"
+                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/97238994/download",
+                    "sha256": "37fa0ab2a645fc170e0b9723e5f59ba70de42000439e7e9befb1c38e5ece213"
 		}, 
 		{
 		    "type": "patch",
