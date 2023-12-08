@@ -1,5 +1,5 @@
 diff --git a/src/downloader.rs b/src/downloader.rs
-index 9014faf..a410828 100644
+index 67aaaec..b31570f 100644
 --- a/src/downloader.rs
 +++ b/src/downloader.rs
 @@ -34,7 +34,7 @@ pub fn download<
@@ -8,11 +8,11 @@ index 9014faf..a410828 100644
          std::env::var("DOWNLOADER").unwrap_or(format!("youtube-dl --output {}", download_dir));
 -    open_with_output(url, downloader_str, move |output| {
 +    open_with_output(url, format!("flatpak-spawn --host {}", downloader_str), move |output| {
-         callback(
-             output
+         if let Ok(output) = output {
+             callback(Ok(output
                  .lines()
 diff --git a/src/player.rs b/src/player.rs
-index 4768002..737648c 100644
+index 47b9f0d..c762683 100644
 --- a/src/player.rs
 +++ b/src/player.rs
 @@ -32,7 +32,7 @@ pub fn play<
@@ -22,5 +22,5 @@ index 4768002..737648c 100644
 -    open_with(url, player_str, callback);
 +    open_with(url, format!("flatpak-spawn --host {}", player_str), callback);
  }
- 
+
  pub fn open_with<
