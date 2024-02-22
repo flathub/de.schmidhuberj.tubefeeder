@@ -1,0 +1,21 @@
+diff --git a/data/de.schmidhuberj.tubefeeder.metainfo.xml b/data/de.schmidhuberj.tubefeeder.metainfo.xml
+index 2167d3d..86e6a59 100644
+--- a/data/de.schmidhuberj.tubefeeder.metainfo.xml
++++ b/data/de.schmidhuberj.tubefeeder.metainfo.xml
+@@ -287,7 +287,6 @@
+ 
+   <provides>
+     <binary>tubefeeder</binary>
+-    <id>de.schmidhuberj.tubefeeder</id>
+   </provides>
+   <supports>
+     <control>keyboard</control>
+@@ -295,8 +294,6 @@
+     <control>touch</control>
+   </supports>
+   <recommends>
+-    <control>keyboard</control>
+-    <control>pointing</control>
+     <internet>always</internet>
+   </recommends>
+   <requires>

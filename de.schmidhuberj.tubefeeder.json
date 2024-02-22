@@ -38,11 +38,15 @@
                     "archive-type": "tar-xz",
                     "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/114523449/download",
                     "sha256": "69ca92d3eba2e675a149a998fe600b5e6420fe1eb917c4426fc25ceb0548d8ac"
-		}, 
-		{
-		    "type": "patch",
-		    "path": "player_downloader.diff"
-		}
+            		}, 
+            		{
+            		    "type": "patch",
+            		    "path": "player_downloader.diff"
+            		},
+            		{
+            		    "type": "patch",
+            		    "path": "metainfo.diff"
+            		}
             ]
         }
     ]
