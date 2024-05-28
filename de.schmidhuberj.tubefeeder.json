@@ -36,8 +36,8 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-xz",
-                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/114831818/download",
-                    "sha256": "cdec2b777777c21a8a73252d10b08502d7475c92a4dd0b940836236e2468b38e"
+                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/130313922/download",
+                    "sha256": "f6e90f6e8aecf99a7a592d9623102e7376005ede69dab5f8b495ed53c51a9aef"
             		}, 
             		{
             		    "type": "patch",
