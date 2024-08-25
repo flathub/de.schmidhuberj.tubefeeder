@@ -36,12 +36,12 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-                    "tag": "v0.12.0",
+                    "tag": "v0.14.0",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
                     },
-                    "commit": "66b43c36cf1017c878762007373964a096b3d2a5"
+                    "commit": "8e10fcf8692108b9d4ab78f41086c5d7773ef864"
                 }
             ]
         },
@@ -57,11 +57,11 @@
                     "archive-type": "tar-xz",
                     "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/130313922/download",
                     "sha256": "f6e90f6e8aecf99a7a592d9623102e7376005ede69dab5f8b495ed53c51a9aef"
-            		}, 
-            		{
-            		    "type": "patch",
-            		    "path": "player_downloader.diff"
-            		}
+                },
+                {
+                    "type": "patch",
+                    "path": "player_downloader.diff"
+                }
             ]
         }
     ]
