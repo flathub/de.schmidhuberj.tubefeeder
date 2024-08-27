@@ -1,7 +1,7 @@
 {
     "app-id": "de.schmidhuberj.tubefeeder",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "45",
+    "runtime-version": "46",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -27,6 +27,67 @@
     },
     "modules": [
         {
+            "name": "blueprint-compiler",
+            "buildsystem": "meson",
+            "cleanup": [
+                "*"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
+                    "tag": "v0.14.0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    },
+                    "commit": "8e10fcf8692108b9d4ab78f41086c5d7773ef864"
+                }
+            ]
+        },
+        {
+            "name": "gtuber",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dintrospection=disabled",
+                "-Dvapi=disabled",
+                "-Dgst-gtuber=enabled"
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/Rafostar/gtuber.git",
+                    "commit": "f5a64d442c18ae2fa732a851ccb4859c8a45d944"
+                }
+            ]
+        },
+        {
+            "name": "clapper",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dclapper=enabled",
+                "-Dclapper-gtk=enabled",
+                "-Dclapper-app=disabled",
+                "-Dintrospection=enabled",
+                "-Dvapi=enabled"
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/Rafostar/clapper.git",
+                    "tag": "0.6.1"
+                }
+            ]
+        },
+        {
             "name": "tubefeeder",
             "buildsystem": "meson",
             "config-opts": [
@@ -36,13 +97,9 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-xz",
-                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/97522257/download",
-                    "sha256": "3214395b77bfd8174067eb24e7ab0094f1163da283d934225699d065c5e653d8"
-		}, 
-		{
-		    "type": "patch",
-		    "path": "player_downloader.diff"
-		}
+                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/145160513/download",
+                    "sha256": "dd9f6a4f163524a14d699741a1be84f179a7c9a58ddb42c2fef351a815bcd145"
+            		} 
             ]
         }
     ]
