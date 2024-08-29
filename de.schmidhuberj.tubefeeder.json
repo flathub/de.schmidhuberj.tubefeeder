@@ -16,7 +16,8 @@
         "--share=network",
         "--filesystem=xdg-data/tubefeeder:create",
         "--filesystem=xdg-download",
-        "--talk-name=org.freedesktop.Flatpak"
+        "--talk-name=org.freedesktop.Flatpak",
+        "--own-name=org.mpris.MediaPlayer2.tubefeeder"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -97,9 +98,9 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-xz",
-                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/145160513/download",
-                    "sha256": "dd9f6a4f163524a14d699741a1be84f179a7c9a58ddb42c2fef351a815bcd145"
-            		} 
+                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/145613898/download",
+                    "sha256": "7df11013c638b36cd5a5263c38300d20bdf46a983c3e54f838f1cb5eaa74b9c3"
+                } 
             ]
         }
     ]
