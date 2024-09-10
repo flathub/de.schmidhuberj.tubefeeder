@@ -16,7 +16,8 @@
         "--share=network",
         "--filesystem=xdg-data/tubefeeder:create",
         "--filesystem=xdg-download",
-        "--talk-name=org.freedesktop.Flatpak"
+        "--talk-name=org.freedesktop.Flatpak",
+        "--own-name=org.mpris.MediaPlayer2.tubefeeder"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -46,6 +47,48 @@
             ]
         },
         {
+            "name": "gtuber",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dintrospection=disabled",
+                "-Dvapi=disabled",
+                "-Dgst-gtuber=enabled"
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/Rafostar/gtuber.git",
+                    "commit": "f5a64d442c18ae2fa732a851ccb4859c8a45d944"
+                }
+            ]
+        },
+        {
+            "name": "clapper",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dclapper=enabled",
+                "-Dclapper-gtk=enabled",
+                "-Dclapper-app=disabled",
+                "-Dintrospection=enabled",
+                "-Dvapi=enabled"
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/Rafostar/clapper.git",
+                    "tag": "0.6.1"
+                }
+            ]
+        },
+        {
             "name": "tubefeeder",
             "buildsystem": "meson",
             "config-opts": [
@@ -55,12 +98,8 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-xz",
-                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/130313922/download",
-                    "sha256": "f6e90f6e8aecf99a7a592d9623102e7376005ede69dab5f8b495ed53c51a9aef"
-                },
-                {
-                    "type": "patch",
-                    "path": "player_downloader.diff"
+                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/147257820/download",
+                    "sha256": "6ad1d1ecc02fd7ed9480125cd2c1481709eeee4921df40320ae319f865b15beb"
                 }
             ]
         }
