@@ -6,6 +6,15 @@
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
+    "add-extensions": {
+        "org.freedesktop.Platform.ffmpeg-full": {
+            "version": "23.08",
+            "directory": "lib/ffmpeg",
+            "add-ld-path": ".",
+            "no-autodownload": false,
+            "autodelete": false
+        }
+    },
     "command": "tubefeeder",
     "finish-args": [
         "--share=ipc",
@@ -103,5 +112,8 @@
                 }
             ]
         }
+    ],
+    "cleanup-commands": [
+        "mkdir -p /app/lib/ffmpeg"
     ]
 }
