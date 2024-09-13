@@ -6,6 +6,15 @@
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
+    "add-extensions": {
+        "org.freedesktop.Platform.ffmpeg-full": {
+            "version": "23.08",
+            "directory": "lib/ffmpeg",
+            "add-ld-path": ".",
+            "no-autodownload": false,
+            "autodelete": false
+        }
+    },
     "command": "tubefeeder",
     "finish-args": [
         "--share=ipc",
@@ -98,10 +107,13 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-xz",
-                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/146078595/download",
-                    "sha256": "3f35ae7a570e694d214d4b8d8d63d30da75d62dae5133bc2b7e5e83504b93d12"
+                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/147752186/download",
+                    "sha256": "321accbe9dbd40b573dccd8e4438f4799c5116e94cfbddc856a5fc5e72a63543"
                 } 
             ]
         }
+    ],
+    "cleanup-commands": [
+        "mkdir -p /app/lib/ffmpeg"
     ]
 }
