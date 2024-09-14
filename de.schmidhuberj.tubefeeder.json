@@ -107,8 +107,8 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-xz",
-                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/147752186/download",
-                    "sha256": "321accbe9dbd40b573dccd8e4438f4799c5116e94cfbddc856a5fc5e72a63543"
+                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/148051874/download",
+                    "sha256": "1d42100e168ef94b709e70018f39b6fb79fc50d659538495d9f3e0cdf12d0865"
                 }
             ]
         }
