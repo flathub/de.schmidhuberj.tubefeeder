@@ -83,7 +83,9 @@
                 "-Dclapper-gtk=enabled",
                 "-Dclapper-app=disabled",
                 "-Dintrospection=enabled",
-                "-Dvapi=enabled"
+                "-Dvapi=enabled",
+                "-Dgluploader=disabled",
+                "-Drawimporter=disabled"
             ],
             "cleanup": [
                 "/include",
