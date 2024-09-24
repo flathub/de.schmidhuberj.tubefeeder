@@ -21,7 +21,7 @@
         "--socket=fallback-x11",
         "--socket=wayland",
         "--socket=pulseaudio",
-        "--device=dri",
+        "--device=all",
         "--share=network",
         "--filesystem=xdg-data/tubefeeder:create",
         "--filesystem=xdg-download",
