@@ -12,14 +12,13 @@ index 4570726..7dfb230 100644
  {
    switch (GST_VIDEO_FRAME_FORMAT (frame)) {
 diff --git a/src/lib/gst/plugin/gstgtkutils.h b/src/lib/gst/plugin/gstgtkutils.h
-index 5d4ed40..292112e 100644
+index 972eccb..e6e0bf9 100644
 --- a/src/lib/gst/plugin/gstgtkutils.h
 +++ b/src/lib/gst/plugin/gstgtkutils.h
-@@ -36,6 +36,9 @@ gpointer        gst_gtk_invoke_on_main                (GThreadFunc func, gpointe
- CLAPPER_GST_API
+@@ -32,6 +32,8 @@ gpointer        gst_gtk_invoke_on_main                (GThreadFunc func, gpointe
+ 
  GdkTexture *    gst_video_frame_into_gdk_texture      (GstVideoFrame *frame);
  
-+CLAPPER_GST_API
 +GdkMemoryFormat gst_gdk_memory_format_from_frame      (GstVideoFrame *frame);
 +
  void            gst_gtk_get_width_height_for_rotation (gint width, gint height,
