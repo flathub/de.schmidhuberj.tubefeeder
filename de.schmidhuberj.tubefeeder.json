@@ -96,6 +96,10 @@
                     "type": "git",
                     "url": "https://github.com/Rafostar/clapper.git",
                     "tag": "0.6.1"
+                },
+                {
+                    "type": "patch",
+                    "path": "tex_builder.patch"
                 }
             ]
         },

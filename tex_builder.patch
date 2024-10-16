@@ -1,0 +1,72 @@
+diff --git a/src/lib/gst/plugin/gstgtkutils.c b/src/lib/gst/plugin/gstgtkutils.c
+index 4570726..7dfb230 100644
+--- a/src/lib/gst/plugin/gstgtkutils.c
++++ b/src/lib/gst/plugin/gstgtkutils.c
+@@ -73,7 +73,7 @@ gst_gtk_invoke_on_main (GThreadFunc func, gpointer data)
+   return info.res;
+ }
+ 
+-static GdkMemoryFormat
++GdkMemoryFormat
+ gst_gdk_memory_format_from_frame (GstVideoFrame *frame)
+ {
+   switch (GST_VIDEO_FRAME_FORMAT (frame)) {
+diff --git a/src/lib/gst/plugin/gstgtkutils.h b/src/lib/gst/plugin/gstgtkutils.h
+index 5d4ed40..292112e 100644
+--- a/src/lib/gst/plugin/gstgtkutils.h
++++ b/src/lib/gst/plugin/gstgtkutils.h
+@@ -36,6 +36,9 @@ gpointer        gst_gtk_invoke_on_main                (GThreadFunc func, gpointe
+ CLAPPER_GST_API
+ GdkTexture *    gst_video_frame_into_gdk_texture      (GstVideoFrame *frame);
+ 
++CLAPPER_GST_API
++GdkMemoryFormat gst_gdk_memory_format_from_frame      (GstVideoFrame *frame);
++
+ void            gst_gtk_get_width_height_for_rotation (gint width, gint height,
+                                                        gint *out_width, gint *out_height,
+                                                        GstVideoOrientationMethod rotation);
+diff --git a/src/lib/gst/plugin/handlers/gl/gstclapperglcontexthandler.c b/src/lib/gst/plugin/handlers/gl/gstclapperglcontexthandler.c
+index 652f8b7..e3a5ccb 100644
+--- a/src/lib/gst/plugin/handlers/gl/gstclapperglcontexthandler.c
++++ b/src/lib/gst/plugin/handlers/gl/gstclapperglcontexthandler.c
+@@ -550,6 +550,7 @@ GdkTexture *
+ gst_clapper_gl_context_handler_make_gl_texture (GstClapperGLContextHandler *self,
+     GstBuffer *buffer, GstVideoInfo *v_info)
+ {
++  GdkGLTextureBuilder *builder;
+   GdkTexture *texture;
+   GstGLSyncMeta *sync_meta;
+   GstVideoFrame frame;
+@@ -568,21 +569,26 @@ gst_clapper_gl_context_handler_make_gl_texture (GstClapperGLContextHandler *self
+ 
+   sync_meta = gst_buffer_get_gl_sync_meta (buffer);
+ 
++  builder = gdk_gl_texture_builder_new ();
++  gdk_gl_texture_builder_set_context (builder, self->gdk_context);
++  gdk_gl_texture_builder_set_format (builder, gst_gdk_memory_format_from_frame (&frame));
++  gdk_gl_texture_builder_set_id (builder, *(guint *) GST_VIDEO_FRAME_PLANE_DATA (&frame, 0));
++  gdk_gl_texture_builder_set_width (builder, GST_VIDEO_FRAME_WIDTH (&frame));
++  gdk_gl_texture_builder_set_height (builder, GST_VIDEO_FRAME_HEIGHT (&frame));
++
+   /* Wait for all previous OpenGL commands to complete,
+    * before we start using the input texture */
+   if (sync_meta) {
+     gst_gl_sync_meta_set_sync_point (sync_meta, self->gst_context);
+-    gst_gl_sync_meta_wait (sync_meta, self->wrapped_context);
++    gdk_gl_texture_builder_set_sync (builder, sync_meta->data);
+   }
+ 
+-  texture = gdk_gl_texture_new (
+-      self->gdk_context,
+-      *(guint *) GST_VIDEO_FRAME_PLANE_DATA (&frame, 0),
+-      GST_VIDEO_FRAME_WIDTH (&frame),
+-      GST_VIDEO_FRAME_HEIGHT (&frame),
++  texture = gdk_gl_texture_builder_build (builder,
+       (GDestroyNotify) gst_buffer_unref,
+       gst_buffer_ref (buffer));
+ 
++  g_object_unref (builder);
++
+   gst_gl_context_activate (self->wrapped_context, FALSE);
+   gdk_gl_context_clear_current ();
+ 
