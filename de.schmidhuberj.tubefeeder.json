@@ -1,14 +1,14 @@
 {
     "app-id": "de.schmidhuberj.tubefeeder",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "46",
+    "runtime-version": "47",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
     "add-extensions": {
         "org.freedesktop.Platform.ffmpeg-full": {
-            "version": "23.08",
+            "version": "24.08",
             "directory": "lib/ffmpeg",
             "add-ld-path": ".",
             "no-autodownload": false,
@@ -21,7 +21,7 @@
         "--socket=fallback-x11",
         "--socket=wayland",
         "--socket=pulseaudio",
-        "--device=dri",
+        "--device=all",
         "--share=network",
         "--filesystem=xdg-data/tubefeeder:create",
         "--filesystem=xdg-download",
@@ -83,7 +83,9 @@
                 "-Dclapper-gtk=enabled",
                 "-Dclapper-app=disabled",
                 "-Dintrospection=enabled",
-                "-Dvapi=enabled"
+                "-Dvapi=enabled",
+                "-Dgluploader=disabled",
+                "-Drawimporter=disabled"
             ],
             "cleanup": [
                 "/include",
