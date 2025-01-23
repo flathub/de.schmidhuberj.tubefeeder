@@ -2,7 +2,9 @@
     "name": "clapper-enhancers",
     "buildsystem": "meson",
     "config-opts": [
-        "-Dauto_features=enabled"
+        "-Dauto_features=disabled",
+        "-Dyt-dlp=enabled",
+        "-Dpeertube=enabled"
     ],
     "sources": [
         {
