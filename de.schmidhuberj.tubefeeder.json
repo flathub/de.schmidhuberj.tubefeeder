@@ -36,69 +36,11 @@
         }
     },
     "modules": [
-        {
-            "name": "blueprint-compiler",
-            "buildsystem": "meson",
-            "cleanup": [
-                "*"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-                    "tag": "v0.16.0",
-                    "x-checker-data": {
-                        "type": "git",
-                        "tag-pattern": "^v([\\d.]+)$"
-                    },
-                    "commit": "04ef0944db56ab01307a29aaa7303df6067cb3c0"
-                }
-            ]
-        },
-        {
-            "name": "gtuber",
-            "buildsystem": "meson",
-            "config-opts": [
-                "-Dintrospection=disabled",
-                "-Dvapi=disabled",
-                "-Dgst-gtuber=enabled"
-            ],
-            "cleanup": [
-                "/include",
-                "/lib/pkgconfig"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/Rafostar/gtuber.git",
-                    "commit": "f5a64d442c18ae2fa732a851ccb4859c8a45d944"
-                }
-            ]
-        },
-        {
-            "name": "clapper",
-            "buildsystem": "meson",
-            "config-opts": [
-                "-Dclapper=enabled",
-                "-Dclapper-gtk=enabled",
-                "-Dclapper-app=disabled",
-                "-Dintrospection=enabled",
-                "-Dvapi=enabled",
-                "-Dgluploader=disabled",
-                "-Drawimporter=disabled"
-            ],
-            "cleanup": [
-                "/include",
-                "/lib/pkgconfig"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/Rafostar/clapper.git",
-                    "tag": "0.6.1"
-                }
-            ]
-        },
+        "lib/blueprint-compiler.json",
+        "lib/python-modules.json",
+        "lib/libpeas.json",
+        "lib/clapper.json",
+        "lib/clapper-enhancers.json",
         {
             "name": "tubefeeder",
             "buildsystem": "meson",
