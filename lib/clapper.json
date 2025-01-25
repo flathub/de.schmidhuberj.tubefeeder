@@ -6,7 +6,7 @@
         "-Dclapper-gtk=enabled",
         "-Dclapper-app=disabled",
         "-Dintrospection=enabled",
-        "-Dvapi=enabled",
+        "-Dvapi=disabled",
         "-Dgluploader=disabled",
         "-Drawimporter=disabled"
     ],
