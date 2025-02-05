@@ -13,6 +13,13 @@
             "add-ld-path": ".",
             "no-autodownload": false,
             "autodelete": false
+        },
+        "com.github.rafostar.Clapper.Enhancers": {
+            "version": "stable",
+            "directory": "extensions/clapper/enhancers",
+            "add-ld-path": "lib",
+            "no-autodownload": false,
+            "autodelete": false
         }
     },
     "command": "tubefeeder",
@@ -26,7 +33,9 @@
         "--filesystem=xdg-data/tubefeeder:create",
         "--filesystem=xdg-download",
         "--talk-name=org.freedesktop.Flatpak",
-        "--own-name=org.mpris.MediaPlayer2.tubefeeder"
+        "--own-name=org.mpris.MediaPlayer2.tubefeeder",
+        "--env=CLAPPER_ENHANCERS_PATH=/app/extensions/clapper/enhancers/plugins",
+        "--env=PYTHONPATH=/app/extensions/clapper/enhancers/python/site-packages"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -37,10 +46,8 @@
     },
     "modules": [
         "lib/blueprint-compiler.json",
-        "lib/python-modules.json",
         "lib/libpeas.json",
         "lib/clapper.json",
-        "lib/clapper-enhancers.json",
         {
             "name": "tubefeeder",
             "buildsystem": "meson",
@@ -58,6 +65,7 @@
         }
     ],
     "cleanup-commands": [
-        "mkdir -p /app/lib/ffmpeg"
+        "mkdir -p /app/lib/ffmpeg",
+        "mkdir -p /app/extensions/clapper/enhancers"
     ]
 }
