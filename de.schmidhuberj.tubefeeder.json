@@ -1,16 +1,23 @@
 {
     "app-id": "de.schmidhuberj.tubefeeder",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "46",
+    "runtime-version": "48",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
     "add-extensions": {
         "org.freedesktop.Platform.ffmpeg-full": {
-            "version": "23.08",
+            "version": "24.08",
             "directory": "lib/ffmpeg",
             "add-ld-path": ".",
+            "no-autodownload": false,
+            "autodelete": false
+        },
+        "com.github.rafostar.Clapper.Enhancers": {
+            "version": "stable",
+            "directory": "extensions/clapper/enhancers",
+            "add-ld-path": "lib",
             "no-autodownload": false,
             "autodelete": false
         }
@@ -21,12 +28,14 @@
         "--socket=fallback-x11",
         "--socket=wayland",
         "--socket=pulseaudio",
-        "--device=dri",
+        "--device=all",
         "--share=network",
         "--filesystem=xdg-data/tubefeeder:create",
         "--filesystem=xdg-download",
         "--talk-name=org.freedesktop.Flatpak",
-        "--own-name=org.mpris.MediaPlayer2.tubefeeder"
+        "--own-name=org.mpris.MediaPlayer2.tubefeeder",
+        "--env=CLAPPER_ENHANCERS_PATH=/app/extensions/clapper/enhancers/plugins",
+        "--env=PYTHONPATH=/app/extensions/clapper/enhancers/python/site-packages"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -36,67 +45,9 @@
         }
     },
     "modules": [
-        {
-            "name": "blueprint-compiler",
-            "buildsystem": "meson",
-            "cleanup": [
-                "*"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-                    "tag": "v0.14.0",
-                    "x-checker-data": {
-                        "type": "git",
-                        "tag-pattern": "^v([\\d.]+)$"
-                    },
-                    "commit": "8e10fcf8692108b9d4ab78f41086c5d7773ef864"
-                }
-            ]
-        },
-        {
-            "name": "gtuber",
-            "buildsystem": "meson",
-            "config-opts": [
-                "-Dintrospection=disabled",
-                "-Dvapi=disabled",
-                "-Dgst-gtuber=enabled"
-            ],
-            "cleanup": [
-                "/include",
-                "/lib/pkgconfig"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/Rafostar/gtuber.git",
-                    "commit": "f5a64d442c18ae2fa732a851ccb4859c8a45d944"
-                }
-            ]
-        },
-        {
-            "name": "clapper",
-            "buildsystem": "meson",
-            "config-opts": [
-                "-Dclapper=enabled",
-                "-Dclapper-gtk=enabled",
-                "-Dclapper-app=disabled",
-                "-Dintrospection=enabled",
-                "-Dvapi=enabled"
-            ],
-            "cleanup": [
-                "/include",
-                "/lib/pkgconfig"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/Rafostar/clapper.git",
-                    "tag": "0.6.1"
-                }
-            ]
-        },
+        "lib/blueprint-compiler.json",
+        "lib/libpeas.json",
+        "lib/clapper.json",
         {
             "name": "tubefeeder",
             "buildsystem": "meson",
@@ -107,13 +58,14 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-xz",
-                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/147752186/download",
-                    "sha256": "321accbe9dbd40b573dccd8e4438f4799c5116e94cfbddc856a5fc5e72a63543"
-                } 
+                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/172598661/download",
+                    "sha256": "6bb1127847888fa428788296b2ae149c1db010d527d345430d4d6ebba6b00649"
+                }
             ]
         }
     ],
     "cleanup-commands": [
-        "mkdir -p /app/lib/ffmpeg"
+        "mkdir -p /app/lib/ffmpeg",
+        "mkdir -p /app/extensions/clapper/enhancers"
     ]
 }
