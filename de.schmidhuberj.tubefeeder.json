@@ -58,8 +58,8 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-xz",
-                    "url": "https://gitlab.com/schmiddi-on-mobile/pipeline/-/package_files/172598661/download",
-                    "sha256": "6bb1127847888fa428788296b2ae149c1db010d527d345430d4d6ebba6b00649"
+                    "url": "https://gitlab.com/api/v4/projects/48404603/packages/generic/pipeline/3.0.0-beta.2/tubefeeder-3.0.0-beta.2.tar.xz",
+                    "sha256": "e50e5a3c201aed250993bdd40fabfa7b2fcced8a5aabbb7157533f39fadc76b9"
                 }
             ]
         }
