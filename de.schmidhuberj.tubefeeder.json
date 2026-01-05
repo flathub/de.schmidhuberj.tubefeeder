@@ -45,7 +45,6 @@
         }
     },
     "modules": [
-        "lib/blueprint-compiler.json",
         "lib/libpeas.json",
         "lib/clapper.json",
         {
