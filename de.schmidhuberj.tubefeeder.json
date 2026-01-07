@@ -1,12 +1,19 @@
 {
     "app-id": "de.schmidhuberj.tubefeeder",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "49",
+    "runtime-version": "48",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
     "add-extensions": {
+        "org.freedesktop.Platform.ffmpeg-full": {
+            "version": "24.08",
+            "directory": "lib/ffmpeg",
+            "add-ld-path": ".",
+            "no-autodownload": false,
+            "autodelete": false
+        },
         "com.github.rafostar.Clapper.Enhancers": {
             "version": "stable",
             "directory": "extensions/clapper/enhancers",
@@ -38,6 +45,7 @@
         }
     },
     "modules": [
+        "lib/blueprint-compiler.json",
         "lib/libpeas.json",
         "lib/clapper.json",
         {
