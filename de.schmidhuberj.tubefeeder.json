@@ -28,7 +28,8 @@
         "--talk-name=org.freedesktop.Flatpak",
         "--own-name=org.mpris.MediaPlayer2.tubefeeder.*",
         "--env=CLAPPER_ENHANCERS_PATH=/app/extensions/clapper/enhancers/plugins",
-        "--env=PYTHONPATH=/app/extensions/clapper/enhancers/python/site-packages"
+        "--env=PYTHONPATH=/app/extensions/clapper/enhancers/python/site-packages",
+        "--env=PATH=/app/bin:/usr/bin:/app/extensions/clapper/enhancers/python/site-packages/bin"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -50,8 +51,8 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-xz",
-                    "url": "https://gitlab.com/api/v4/projects/48404603/packages/generic/pipeline/3.2.2/tubefeeder-3.2.2.tar.xz",
-                    "sha256": "79a8d2cf7a21e0d62a22f960d452bbdcff03824353c8e66915a1ab550cc80e97"
+                    "url": "https://gitlab.com/api/v4/projects/48404603/packages/generic/pipeline/3.2.3/tubefeeder-3.2.3.tar.xz",
+                    "sha256": "1a73b6af9374a66f001b57f587e18a38677005030227b0f29372322939159735"
                 }
             ]
         }
