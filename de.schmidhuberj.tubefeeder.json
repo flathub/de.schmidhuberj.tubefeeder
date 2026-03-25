@@ -1,19 +1,12 @@
 {
     "app-id": "de.schmidhuberj.tubefeeder",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "48",
+    "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
     "add-extensions": {
-        "org.freedesktop.Platform.ffmpeg-full": {
-            "version": "24.08",
-            "directory": "lib/ffmpeg",
-            "add-ld-path": ".",
-            "no-autodownload": false,
-            "autodelete": false
-        },
         "com.github.rafostar.Clapper.Enhancers": {
             "version": "stable",
             "directory": "extensions/clapper/enhancers",
@@ -31,11 +24,11 @@
         "--device=all",
         "--share=network",
         "--filesystem=xdg-data/tubefeeder:create",
-        "--filesystem=xdg-download",
-        "--talk-name=org.freedesktop.Flatpak",
+        "--filesystem=xdg-videos/Pipeline:create",
         "--own-name=org.mpris.MediaPlayer2.tubefeeder.*",
         "--env=CLAPPER_ENHANCERS_PATH=/app/extensions/clapper/enhancers/plugins",
-        "--env=PYTHONPATH=/app/extensions/clapper/enhancers/python/site-packages"
+        "--env=PYTHONPATH=/app/extensions/clapper/enhancers/python/site-packages",
+        "--env=PATH=/app/bin:/usr/bin:/app/extensions/clapper/enhancers/python/site-packages/bin"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
@@ -45,7 +38,6 @@
         }
     },
     "modules": [
-        "lib/blueprint-compiler.json",
         "lib/libpeas.json",
         "lib/clapper.json",
         {
@@ -58,8 +50,8 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-xz",
-                    "url": "https://gitlab.com/api/v4/projects/48404603/packages/generic/pipeline/3.1.0-beta.1/tubefeeder-3.1.0-beta.1.tar.xz",
-                    "sha256": "115187ff1486092e8c50ba4851493676224da185522b085f55876f50d17018e7"
+                    "url": "https://gitlab.com/api/v4/projects/48404603/packages/generic/pipeline/4.0.0-beta.1/tubefeeder-4.0.0-beta.1.tar.xz",
+                    "sha256": "dc9aa98c8768dfe90074f5c25fdc1de2e300a68ec80168762f578cf023f3caec"
                 }
             ]
         }
