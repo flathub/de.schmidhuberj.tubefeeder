@@ -50,8 +50,8 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-xz",
-                    "url": "https://gitlab.com/api/v4/projects/48404603/packages/generic/pipeline/4.0.0-beta.4/tubefeeder-4.0.0-beta.4.tar.xz",
-                    "sha256": "8d84f293d4c0dfb91d08dcbd467dcd71eede08729e369d2382d0a31aaedba721"
+                    "url": "https://gitlab.com/api/v4/projects/48404603/packages/generic/pipeline/4.0.0-beta.5/tubefeeder-4.0.0-beta.5.tar.xz",
+                    "sha256": "941e8395bdf294db62ece6cbb45c1b789ce242e47807b670d7792dbc84e0d87d"
                 }
             ]
         }
