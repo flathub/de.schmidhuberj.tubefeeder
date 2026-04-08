@@ -38,6 +38,10 @@
             "RUST_BACKTRACE": "1"
         }
     },
+    "cleanup": [
+        "/include",
+        "/share/gir-1.0"
+    ],
     "modules": [
         "lib/libpeas.json",
         "lib/clapper.json",
