@@ -1,7 +1,7 @@
 {
     "app-id": "de.schmidhuberj.tubefeeder",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "49",
+    "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -24,8 +24,7 @@
         "--device=all",
         "--share=network",
         "--filesystem=xdg-data/tubefeeder:create",
-        "--filesystem=xdg-download",
-        "--talk-name=org.freedesktop.Flatpak",
+        "--filesystem=xdg-videos/Pipeline:create",
         "--own-name=org.mpris.MediaPlayer2.tubefeeder.*",
         "--env=CLAPPER_ENHANCERS_PATH=/app/extensions/clapper/enhancers/plugins",
         "--env=PYTHONPATH=/app/extensions/clapper/enhancers/python/site-packages",
@@ -55,8 +54,8 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-xz",
-                    "url": "https://gitlab.com/api/v4/projects/48404603/packages/generic/pipeline/3.3.1/tubefeeder-3.3.1.tar.xz",
-                    "sha256": "d0283d1c9d6bc0c5d0bfc0bcfb72cba0983e437294711967c9c4226b5185a411"
+                    "url": "https://gitlab.com/api/v4/projects/48404603/packages/generic/pipeline/4.0.0/tubefeeder-4.0.0.tar.xz",
+                    "sha256": "eb5a66e6713a16a0ccf075bfb7a4ea5aa474de764192d20b733975a60f9d2b57"
                 }
             ]
         }
