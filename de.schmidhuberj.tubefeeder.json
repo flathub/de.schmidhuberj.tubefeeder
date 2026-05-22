@@ -23,6 +23,7 @@
         "--socket=pulseaudio",
         "--device=all",
         "--share=network",
+        "--filesystem=xdg-run/pipewire-0:ro",
         "--filesystem=xdg-data/tubefeeder:create",
         "--filesystem=xdg-videos/Pipeline:create",
         "--own-name=org.mpris.MediaPlayer2.tubefeeder.*",
