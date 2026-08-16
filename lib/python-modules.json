@@ -1,0 +1,34 @@
+{
+    "name": "python-modules",
+    "buildsystem": "simple",
+    "build-options": {
+        "env": {
+            "PIP_TARGET": "/app/python/site-packages"
+        }
+    },
+    "build-commands": [
+        "pip3 install -v --root-user-action=ignore --no-deps *.whl"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/e3/bd/520769863744b669440a924271a6159ddd82ad5ae26b4ac4d4b69e9f8d44/yt_dlp_ejs-0.8.0-py3-none-any.whl",
+            "sha256": "79300e5fca7f937a1eeede11f0456862c1b41107ce1d726871e0207424f4bdb4",
+            "x-checker-data": {
+                "type": "pypi",
+                "name": "yt-dlp-ejs",
+                "packagetype": "bdist_wheel"
+            }
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/f9/8a/cd4c9b02c10c563adfe78118310129641900e1cd6de888cfae2452072696/yt_dlp-2026.7.4-py3-none-any.whl",
+            "sha256": "f11f2b11d5a8ac4059f9bdf29fa4407dc7c6bb00c5097e95ca22a7a9db518266",
+            "x-checker-data": {
+                "type": "pypi",
+                "name": "yt-dlp",
+                "packagetype": "bdist_wheel"
+            }
+        }
+    ]
+}
