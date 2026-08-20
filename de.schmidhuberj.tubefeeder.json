@@ -28,8 +28,8 @@
         "--filesystem=xdg-videos/Pipeline:create",
         "--own-name=org.mpris.MediaPlayer2.tubefeeder.*",
         "--env=CLAPPER_ENHANCERS_PATH=/app/extensions/clapper/enhancers/plugins",
-        "--env=PYTHONPATH=/app/python/site-packages",
-        "--env=PATH=/app/bin:/usr/bin:/app/python/site-packages/bin"
+        "--env=PYTHONPATH=/app/python/site-packages:/app/extensions/clapper/enhancers/python/site-packages",
+        "--env=PATH=/app/bin:/usr/bin:/app/python/site-packages/bin:/app/extensions/clapper/enhancers/python/site-packages/bin"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin",
